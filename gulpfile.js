@@ -43,30 +43,31 @@ gulp.task('css', function() {
             browsers: ['last 1 version']
         }), cssnano()
     ];
-    return gulp.src('assets/css/main.css')
+    return gulp.src('css/main.css')
         .pipe(sourcemaps.init())
         .pipe(postcss(processors))
         .pipe(plumber())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./_site/css'))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest('./_site/assets/css'))
+        .pipe(gulp.dest('./assets/css/'))
         .pipe(browserSync.stream());
 });
 
 gulp.task('reload', browserSync.reload);
 gulp.task('compress', function() {
-    return gulp.src('assets/javascripts/**/*.js')
+    return gulp.src('javascripts/**/*.js')
         .pipe(sourcemaps.init())
         //.pipe(plumber())
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./_site/javascript'))
+        .pipe(gulp.dest('./_site/assets/javascript'))
+        .pipe(gulp.dest('./assets/javascript'))
         .pipe(browserSync.stream());
 });
 
 gulp.task('watch', function() {
-    gulp.watch('assets/css/**', ['css']);
-    gulp.watch('assets/javascripts/**/*.js', ['compress', 'reload']);
+    gulp.watch('css/**', ['css']);
+    gulp.watch('javascripts/**/*.js', ['compress', 'reload']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 

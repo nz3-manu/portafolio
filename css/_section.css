@@ -33,7 +33,7 @@
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url("../img/parallax1.jpg");
+    background-image: url("/img/parallax1.jpg");
 }
 .section_text {
     background-color: rgba(27, 48, 119, 0.41);
@@ -316,32 +316,32 @@
 /* Icons ---------------------------------- */
 
 #name {
-    background-image: url("../img/name.svg");
+    background-image: url("/img/name.svg");
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
 }
 #name:focus {
-    background-image: url("../img/name.svg");
+    background-image: url("/img/name.svg");
     background-size: 30px 30px;
     background-position: 8px 5px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
 }
 #email {
-    background-image: url("../img/email.svg");
+    background-image: url("/img/email.svg");
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
 }
 #email:focus {
-    background-image: url("../img/email.svg");
+    background-image: url("/img/email.svg");
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
 }
 #comment {
-    background-image: url("../img/comment.svg");
+    background-image: url("/img/comment.svg");
     background-size: 30px 30px;
     background-position: 11px 8px;
     background-repeat: no-repeat;
