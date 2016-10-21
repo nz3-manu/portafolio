@@ -1,7 +1,7 @@
 .hero {
     padding-bottom: 2px;
     width: 100%;
-    background-image: url(/img/heroImg.jpg);
+    background-image: url(../../img/heroImg.jpg);
     background-size: cover;
 }
 #particles-js {
