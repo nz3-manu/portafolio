@@ -18,7 +18,11 @@
     "gulp-postcss": "^6.2.0",
     "gulp-sourcemaps": "^2.1.1",
     "gulp-uglify": "^2.0.0",
+    "jquery": "^3.1.1",
     "precss": "^1.4.0",
     "stylelint-config-standard": "^13.0.2"
+  },
+  "dependencies": {
+    "particles.js": "^2.0.0"
   }
 }
