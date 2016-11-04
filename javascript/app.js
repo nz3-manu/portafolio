@@ -1,23 +1,19 @@
 var $ = require("jquery");
-var ReactDom = require("react-dom");
-var React = require("react");
-require("particles.js/particles.js");
-require("particles.js/demo/js/lib/stats.js");
-require("particles.js/demo/js/app.js");
-window.particlesJS;
-window.Stats;
+var RenderHtml = require("./rendererHtml.js");
 
-// NOTE: react
-ReactDom.render(<div>   // NOTE: ReactDom, va a tener un funcion que es render, la cual acepta 2 parametros el primero es el html que deseamos insertar. el segundo parametro es un querySelector de donde queremos intalarlos
-  <h1>padre1</h1><span>padre2</span>
-  </div>,document.getElementById('root'));
-// NOTE:
-
-var CustomAlert = require("./alertStyle"); //duda
+var ancho = $(window).width();
+if (ancho > 600) {
+  require("particles.js/particles.js");
+  require("particles.js/demo/js/lib/stats.js");
+  require("particles.js/demo/js/app.js");
+}
+  
+var CustomAlert = require("./alertStyle");
 var Alert = new CustomAlert();
-
 var form = require("./sentMessage.js");
 $(document).ready(form($, Alert));
+
+
 /****************************************************
 ============= click function hamburger menu =========
 ****************************************************/
@@ -42,7 +38,6 @@ var navMenu = document.querySelector('.nav_list');
 navMenu.onclick = () => {
     document.body.removeAttribute('data-state');
 }
-
 /****************************************************
 ======================== skillbar ===================
 ****************************************************/
