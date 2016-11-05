@@ -10339,8 +10339,6 @@
 
 	var ReactDom = __webpack_require__(4);
 	var React = __webpack_require__(169);
-	/*Principal div*/
-
 	/* header */
 	var Header = React.createClass({
 	    displayName: "Header",
@@ -10431,7 +10429,6 @@
 	        );
 	    }
 	});
-	ReactDom.render(React.createElement(Header, null), document.getElementById('header'));
 
 	/* Hero */
 	var Hero = React.createClass({
@@ -10453,15 +10450,14 @@
 	        );
 	    }
 	});
-	ReactDom.render(React.createElement(Hero, null), document.getElementById('renderHero'));
-
+	/* Section */
 	var Section = React.createClass({
 	    displayName: "Section",
 
 	    render: function render() {
 	        return React.createElement(
 	            "div",
-	            { classNameclassName: "wrap_content overlay" },
+	            { className: "wrap_content overlay" },
 	            React.createElement(
 	                "div",
 	                { className: "content_section" },
@@ -10978,7 +10974,21 @@
 	        );
 	    }
 	});
-	ReactDom.render(React.createElement(Section, null), document.getElementById('renderSection'));
+	/*Principal div*/
+	var App = React.createClass({
+	    displayName: "App",
+
+	    render: function render() {
+	        return React.createElement(
+	            "div",
+	            null,
+	            React.createElement(Header, null),
+	            React.createElement(Hero, null),
+	            React.createElement(Section, null)
+	        );
+	    }
+	});
+	ReactDom.render(React.createElement(App, null), document.getElementById('app'));
 
 /***/ },
 /* 4 */

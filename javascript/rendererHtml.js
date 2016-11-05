@@ -1,7 +1,5 @@
 var ReactDom = require("react-dom");
 var React = require("react");
-/*Principal div*/
-
 /* header */
 var Header = React.createClass({
   render:function(){
@@ -31,8 +29,6 @@ var Header = React.createClass({
     </header>);
   }
 });
-ReactDom.render(<Header/>, document.getElementById('header'));
-
 
 /* Hero */
 var Hero = React.createClass({
@@ -46,13 +42,11 @@ var Hero = React.createClass({
     )
   }
 })
-ReactDom.render(<Hero/>, document.getElementById('renderHero'));
-
-
+/* Section */
 var Section = React.createClass({
   render:function(){
     return(
-  <div classNameclassName="wrap_content overlay">
+  <div className="wrap_content overlay">
     <div className="content_section">
       <section>
         <div id="wrap_section">
@@ -254,4 +248,15 @@ var Section = React.createClass({
     </footer>
   </div>)}
 })
-ReactDom.render(<Section/>, document.getElementById('renderSection'));
+/*Principal div*/
+var App = React.createClass({
+  render:function(){
+    return(
+      <div>
+        <Header />
+        <Hero />
+        <Section />
+      </div>
+    )}
+})
+ReactDom.render(<App />, document.getElementById('app'));
