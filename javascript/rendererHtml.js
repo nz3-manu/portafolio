@@ -1,7 +1,16 @@
 var ReactDom = require("react-dom");
 var React = require("react");
+
+
+
 /* header */
 var Header = React.createClass({
+  componentWillMount:function(){
+  fetch('itemsMenu.json').then(menu => menu.json(), e => {
+        console.log("Obtención fallida", e);}).then(function(json){
+          console.log(json);
+        })
+  },
   render:function(){
     return(
       <header>
@@ -21,7 +30,7 @@ var Header = React.createClass({
                             <li><a href="#portafolio">Portafolio</a></li>
                             <li><a href="#contact">Contactarme</a></li>
                         </ul>
-                        <p className="nav_copyright"> &lt/&gt Manuel Ramirez &lt/&gt </p>
+                        <p className="nav_copyright"> Manuel Ramirez </p>
                     </div>
                 </nav>
             </div>
@@ -30,24 +39,17 @@ var Header = React.createClass({
   }
 });
 
-/* Hero */
-var Hero = React.createClass({
-  render:function(){
-    return(
-      <div className="hero">
-          <div id="particles-js">
-              <div className="photo"><img src="img/freelancer-web-developer-picture.jpg" alt="Profile picture freelancer web developer" /></div>
-          </div>
-      </div>
-    )
-  }
-})
-/* Section */
+/* Hero Section  Footer*/
 var Section = React.createClass({
   render:function(){
     return(
   <div className="wrap_content overlay">
     <div className="content_section">
+      <div className="hero">
+          <div id="particles-js">
+              <div className="photo"><img src="img/freelancer-web-developer-picture.jpg" alt="Profile picture freelancer web developer" /></div>
+          </div>
+      </div>
       <section>
         <div id="wrap_section">
             <div className="section_text">
@@ -254,7 +256,6 @@ var App = React.createClass({
     return(
       <div>
         <Header />
-        <Hero />
         <Section />
       </div>
     )}

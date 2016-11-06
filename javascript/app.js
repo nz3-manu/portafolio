@@ -3,11 +3,11 @@ var RenderHtml = require("./rendererHtml.js");
 
 var ancho = $(window).width();
 if (ancho > 600) {
-  require("particles.js/particles.js");
-  require("particles.js/demo/js/lib/stats.js");
-  require("particles.js/demo/js/app.js");
+require("particles.js/demo/js/lib/stats.js");
+require("particles.js/particles.js");
+require("particles.js/demo/js/app.js");
 }
-  
+
 var CustomAlert = require("./alertStyle");
 var Alert = new CustomAlert();
 var form = require("./sentMessage.js");

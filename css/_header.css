@@ -1,17 +1,10 @@
-@media(min-width: 1000px) {
-    header {
-        width: 100%;
-        height: auto;
-        background-color: $principalColor;
-    }
-    .header {
-        width: 1000px;
-        margin: auto;
-    }
+
+.header {
+  height: 60px;
 }
 .wrap__header {
-    width: 2.25rem;
-    height: 6rem;
+    min-width: 200px;
+    height: 60px;
     background-color: $principalColor;
     font-size: 0;
     display: flex;
@@ -27,14 +20,17 @@
     }
 }
 @media (min-width: 768px) {
+  .header {
+    height: 74px;
+  }
     .wrap__header {
         position: relative;
-        height: 7.4rem;
+        height: 74px;
     }
 }
 .logo {
     vertical-align: top;
-    padding-left: 2.4rem;
+    padding-left: 24px;
     transform: translateX(-200%);
     width: 100%;
     height: 100%;
@@ -45,6 +41,17 @@
         font-weight: bolder;
         font-family: $ubuntu;
         color: white;
+    }
+}
+@media(min-width: 1000px) {
+    header {
+        width: 100%;
+        height: 100%;
+        background-color: $principalColor;
+    }
+    .header {
+        width: 1000px;
+        margin: auto;
     }
 }
 @media (min-width: 767px) {
@@ -65,7 +72,7 @@
 .hamburguer_container {
     font-size: 1.6rem;
     cursor: pointer;
-    padding: 2rem 2.4rem;
+    padding: 20px 24px;
     display: inline-block;
     position: absolute;
     left: 0;
@@ -81,8 +88,8 @@
     left: calc(100% - (2.4rem*3));
 }
 .hamburger {
-    width: 2.4rem;
-    height: 2rem;
+    width: 24px;
+    height: 20px;
     position: relative;
 }
 .hamburger::after, .hamburger::before {
@@ -90,7 +97,7 @@
     display: block;
     position: absolute;
     width: 100%;
-    height: 0.4rem;
+    height: 4px;
     top: 50%;
     transition: translateY(-50%);
     transition: box-shadow 0.3 0.3s, transform 0.3s;
@@ -132,8 +139,8 @@ nav.nav {
 .nav_container {
     position: relative;
     min-height: 100%;
-    padding-bottom: 4.8rem;
-    padding-top: 1.2rem;
+    padding-bottom: 48px;
+    padding-top: 12px;
     ul.nav_list {
         list-style: none;
     }
@@ -175,7 +182,7 @@ li {
     }
     ul.nav_list {
         font-weight: bolder;
-        min-height: 7.2rem;
+        min-height: 72px;
         display: flex;
         justify-content: space-between;
         background-color: $principalColor;
@@ -196,16 +203,16 @@ li {
             padding: 0;
             display: inline-block;
             color: #fff;
-            line-height: 7.2rem;
+            line-height: 72px;
         }
     }
 }
 .nav_copyright {
     text-align: center;
     font-size: 1.2rem;
-    min-height: 4.8rem;
-    line-height: 4.8rem;
-    padding: 0 2.4rem;
+    min-height: 48px;
+    line-height: 48px;
+    padding: 0 24px;
     position: absolute;
     color: $principalColor;
     bottom: 0;

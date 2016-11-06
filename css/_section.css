@@ -1,5 +1,4 @@
 .wrap_content {
-    position: absolute;
     top: 6rem;
 }
 @media (min-width: 767px) {
@@ -20,6 +19,9 @@
 .content_section {
     min-width: 30rem;
 }
+[data-state="menu-open"] .wrap_content {
+  position: absolute;
+}
 [data-state="menu-open"] .overlay {
     visibility: visible;
     left: 70%;
@@ -29,6 +31,8 @@
     transition: all 0.3s;
     opacity: 1;
 }
+
+
 #wrap_section {
     background-attachment: fixed;
     background-size: cover;
