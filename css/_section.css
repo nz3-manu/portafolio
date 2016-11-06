@@ -16,8 +16,8 @@
 [data-state="menu-open"] #particles-js, [data-state="menu-open"] .section_text {
     background-color: rgba(84, 77, 77, 0.45);
 }
-.content_section {
-    min-width: 30rem;
+.wrap_content {
+    min-width: 200px;
 }
 [data-state="menu-open"] .wrap_content {
   position: absolute;
