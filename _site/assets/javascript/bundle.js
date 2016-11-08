@@ -10340,23 +10340,64 @@
 	var ReactDom = __webpack_require__(4);
 	var React = __webpack_require__(169);
 
+	var User = React.createClass({
+	    displayName: "User",
+
+
+	    render: function render() {
+	        return React.createElement(
+	            "div",
+	            { className: "user" },
+	            React.createElement(
+	                "div",
+	                null,
+	                " name: ",
+	                this.props.name
+	            )
+	        );
+	    }
+	});
+
 	/* header */
 	var Header = React.createClass({
 	    displayName: "Header",
 
-	    componentWillMount: function componentWillMount() {
+
+	    getInitialState: function getInitialState() {
+	        return {
+	            users: []
+	        };
+	    },
+	    componentDidMount: function componentDidMount() {
+	        var _this = this;
+
 	        fetch('itemsMenu.json').then(function (menu) {
 	            return menu.json();
 	        }, function (e) {
 	            console.log("Obtención fallida", e);
-	        }).then(function (json) {
-	            console.log(json);
+	        }).then(function (menu) {
+	            _this.setState({
+	                users: menu
+	            });
 	        });
 	    },
 	    render: function render() {
 	        return React.createElement(
 	            "header",
 	            null,
+	            React.createElement(
+	                "h1",
+	                null,
+	                "Testing react key and map"
+	            ),
+	            this.state.users.map(function (manuel) {
+	                return React.createElement(User, { name: manuel.item, key: manuel.item });
+	            }),
+	            React.createElement(
+	                "h1",
+	                null,
+	                "Final testing Testing react key and map"
+	            ),
 	            React.createElement(
 	                "div",
 	                { className: "header" },

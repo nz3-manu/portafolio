@@ -1,19 +1,51 @@
 var ReactDom = require("react-dom");
 var React = require("react");
 
+/* generator li */
+var itemMenu = React.createClass({
+  render: function () {
+    return (
+      <li><a href="#home">{this.props.item}</a></li>
+    )
+  }
+})
 
+var User = React.createClass({
+
+  render: function (){
+    return (
+    <div className="user">
+      <div> {this.props.name}</div>
+  </div>
+    )
+  }
+})
 
 /* header */
 var Header = React.createClass({
-  componentWillMount:function(){
+
+  getInitialState: function() {
+    return {
+       users: []
+    };
+  },
+  componentDidMount: function () {
   fetch('itemsMenu.json').then(menu => menu.json(), e => {
-        console.log("Obtención fallida", e);}).then(function(json){
-          console.log(json);
+        console.log("Obtención fallida", e);}).then(menu => {
+          this.setState({
+            users: menu
+          })
         })
   },
-  render:function(){
+  render: function () {
     return(
       <header>
+        <h1>Testing react key and map</h1>
+        {this.state.users.map(manuel => {
+          return <User name = {manuel.item} key={manuel.item}/>
+        })}
+        <h1>Final testing Testing react key and map</h1>
+
         <div className="header">
             <div className="wrap__header">
                 <div className="logo">
@@ -38,6 +70,10 @@ var Header = React.createClass({
     </header>);
   }
 });
+
+
+
+
 
 /* Hero Section  Footer*/
 var Section = React.createClass({

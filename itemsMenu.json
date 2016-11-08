@@ -1,6 +1,6 @@
 [
-  {"item1": "Acerca de mi"},
-	{"item2": "Servicio"},
-	{"item3": "Portafolio"},
-	{"item4": "contactar me"}
+  {"item": "Acerca de mi"},
+	{"item": "Servicio"},
+	{"item": "Portafolio"},
+	{"item": "contactar me"}
 ]
