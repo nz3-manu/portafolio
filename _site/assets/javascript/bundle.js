@@ -10340,7 +10340,7 @@
 	var ReactDom = __webpack_require__(4);
 	var React = __webpack_require__(169);
 
-	/* generator li */
+	/* li json */
 	var ItemMenu = React.createClass({
 	    displayName: "ItemMenu",
 
@@ -10359,19 +10359,32 @@
 	    }
 	});
 
-	var User = React.createClass({
-	    displayName: "User",
-
+	/* section json*/
+	var SectionJson = React.createClass({
+	    displayName: "SectionJson",
 
 	    render: function render() {
 	        return React.createElement(
 	            "div",
-	            { className: "user" },
+	            { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
 	            React.createElement(
 	                "div",
+	                { className: this.props.icon },
+	                " "
+	            ),
+	            React.createElement(
+	                "h3",
 	                null,
 	                " ",
-	                this.props.name
+	                this.props.title,
+	                " "
+	            ),
+	            React.createElement(
+	                "p",
+	                null,
+	                " ",
+	                this.props.content,
+	                " "
 	            )
 	        );
 	    }
@@ -10380,7 +10393,6 @@
 	/* header */
 	var Header = React.createClass({
 	    displayName: "Header",
-
 
 	    getInitialState: function getInitialState() {
 	        return {
@@ -10458,6 +10470,24 @@
 	var Section = React.createClass({
 	    displayName: "Section",
 
+	    getInitialState: function getInitialState() {
+	        return {
+	            section: []
+	        };
+	    },
+	    componentDidMount: function componentDidMount() {
+	        var _this2 = this;
+
+	        fetch('section.json').then(function (sectionJson) {
+	            return sectionJson.json();
+	        }, function (e) {
+	            console.log("Obtención fallida", e);
+	        }).then(function (sectionJson) {
+	            _this2.setState({
+	                section: sectionJson
+	            });
+	        });
+	    },
 	    render: function render() {
 	        return React.createElement(
 	            "div",
@@ -10765,96 +10795,9 @@
 	                                React.createElement(
 	                                    "div",
 	                                    { className: "row" },
-	                                    React.createElement(
-	                                        "div",
-	                                        { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
-	                                        React.createElement("div", { className: "icon-pencil2" }),
-	                                        React.createElement(
-	                                            "h3",
-	                                            null,
-	                                            "Dise\xF1o web"
-	                                        ),
-	                                        React.createElement(
-	                                            "p",
-	                                            null,
-	                                            "Su sitio web est\xE1 dise\xF1ado para cumplir con sus expectativas y las de sus clientes. Es importante que su sitio web se ve bien en los usuarios, permitiendo a su sitio web para tener \xE9xito y cumplir con los objetivos que estamos esforzando."
-	                                        )
-	                                    ),
-	                                    React.createElement(
-	                                        "div",
-	                                        { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
-	                                        React.createElement("div", { className: "icon-embed2" }),
-	                                        React.createElement(
-	                                            "h3",
-	                                            null,
-	                                            "Desarrollo Web"
-	                                        ),
-	                                        React.createElement(
-	                                            "p",
-	                                            null,
-	                                            "Me encargo de desarrollar todos los sitios web que funcionen como se requieran. Utilizando siempre la mejor tecnolog\xEDa permitiendo as\xED optimizar el rendimiento y ser m\xE1s eficiente, esto proporcionar\xE1 una mejor experiencia para usted y sus usuarios. Sea cual sea su idea, puedo convertirlo en una realidad."
-	                                        )
-	                                    ),
-	                                    React.createElement(
-	                                        "div",
-	                                        { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
-	                                        React.createElement("div", { className: "icon-mobile" }),
-	                                        React.createElement(
-	                                            "h3",
-	                                            null,
-	                                            "Responsive Design"
-	                                        ),
-	                                        React.createElement(
-	                                            "p",
-	                                            null,
-	                                            "Casi la mitad de todo el tr\xE1fico de Internet es ahora de una audiencia m\xF3vil. Es importante que su sitio web sea compatible con todos los tama\xF1os de pantalla en esta era moderna. Me aseguro de que su sitio web sea responsive, lo que significa que es compatible con cualquier tama\xF1o de la pantalla en cualquier dispositivo."
-	                                        )
-	                                    ),
-	                                    React.createElement(
-	                                        "div",
-	                                        { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
-	                                        React.createElement("div", { className: "icon-search" }),
-	                                        React.createElement(
-	                                            "h3",
-	                                            null,
-	                                            "SEO"
-	                                        ),
-	                                        React.createElement(
-	                                            "p",
-	                                            null,
-	                                            "Cuando estoy creando sitios web, siempre pienso en la optimizaci\xF3n de motores de b\xFAsqueda (SEO) en mi mente. Llevo a cabo las pr\xE1cticas est\xE1ndar de SEO on-page en cada p\xE1gina de cada sitio web que creo, lo que permite su sitio rango m\xE1s alto en los motores de b\xFAsqueda - potencialmente conducir m\xE1s tr\xE1fico a su sitio."
-	                                        )
-	                                    ),
-	                                    React.createElement(
-	                                        "div",
-	                                        { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
-	                                        React.createElement("div", { className: "icon-briefcase" }),
-	                                        React.createElement(
-	                                            "h3",
-	                                            null,
-	                                            "eCommerce"
-	                                        ),
-	                                        React.createElement(
-	                                            "p",
-	                                            null,
-	                                            "Con a\xF1os de experiencia en el comercio electr\xF3nico, puedo desarrollar una soluci\xF3n de comercio electr\xF3nico adaptado a las necesidades de usted, su negocio y los clientes. Y desarrollar soluciones eficaces, eficientes y de comercio electr\xF3nico bien dise\xF1ados para que coincida con sus requisitos exactos."
-	                                        )
-	                                    ),
-	                                    React.createElement(
-	                                        "div",
-	                                        { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
-	                                        React.createElement("div", { className: "icon-insert-template" }),
-	                                        React.createElement(
-	                                            "h3",
-	                                            null,
-	                                            "Gesti\xF3n de contenido"
-	                                        ),
-	                                        React.createElement(
-	                                            "p",
-	                                            null,
-	                                            "Es importante que usted sea capaz de manejar su sitio web, desde cualquier lugar en cualquier momento. yo desarrollo sistemas de gesti\xF3n de contenidos que le permiten ver sus datos de sitios web y editar el contenido importante en su sitio web, que le permite mantener actualizado el contenido."
-	                                        )
-	                                    )
+	                                    this.state.section.map(function (section) {
+	                                        return React.createElement(SectionJson, { icon: section.icon, title: section.title, content: section.content, key: section.icon });
+	                                    })
 	                                )
 	                            ),
 	                            React.createElement(

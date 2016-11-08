@@ -1,7 +1,7 @@
 var ReactDom = require("react-dom");
 var React = require("react");
 
-/* generator li */
+/* li json */
 var ItemMenu = React.createClass({
   render: function () {
     return (
@@ -10,20 +10,21 @@ var ItemMenu = React.createClass({
   }
 })
 
-var User = React.createClass({
-
-  render: function (){
-    return (
-    <div className="user">
-      <div> {this.props.name}</div>
-  </div>
-    )
-  }
+/* section json*/
+var SectionJson = React.createClass({
+render: function () {
+  return (
+    <div className = "col-xs-12 col-sm-6 col-md-4 margin-col">
+        <div className = {this.props.icon}> </div>
+        <h3> {this.props.title} </h3>
+        <p> {this.props.content} </p>
+    </div>
+  )
+}
 })
 
 /* header */
 var Header = React.createClass({
-
   getInitialState: function() {
     return {
        menu: []
@@ -65,11 +66,21 @@ var Header = React.createClass({
 });
 
 
-
-
-
 /* Hero Section  Footer*/
 var Section = React.createClass({
+  getInitialState: function() {
+    return {
+      section : []
+    }
+  },
+  componentDidMount: function() {
+    fetch('section.json').then(sectionJson => sectionJson.json(), e => {
+    console.log("Obtención fallida", e);}).then(sectionJson => {
+      this.setState({
+        section: sectionJson
+      })
+    })
+  },
   render:function(){
     return(
   <div className="wrap_content overlay">
@@ -170,53 +181,9 @@ var Section = React.createClass({
                 <h2 id="services">Servicios</h2>
                 <div className="wrap__services">
                     <div className="row">
-                        <div className="col-xs-12 col-sm-6 col-md-4 margin-col">
-                            <div className="icon-pencil2"></div>
-                            <h3>Diseño web</h3>
-                            <p>
-                                Su sitio web está diseñado para cumplir con sus expectativas y las de sus clientes. Es importante que su sitio web se ve bien en los usuarios, permitiendo a su sitio web para tener éxito y cumplir con los objetivos que estamos esforzando.
-                            </p>
-                        </div>
-                        <div className="col-xs-12 col-sm-6 col-md-4 margin-col">
-                            <div className="icon-embed2"></div>
-                            <h3>Desarrollo Web</h3>
-                            <p>
-                                Me encargo de desarrollar todos los sitios web que funcionen como se requieran. Utilizando siempre la mejor tecnología permitiendo así optimizar el rendimiento y ser más eficiente, esto proporcionará una mejor experiencia para usted y sus usuarios. Sea
-                                cual sea su idea, puedo convertirlo en una realidad.
-                            </p>
-                        </div>
-                        <div className="col-xs-12 col-sm-6 col-md-4 margin-col">
-                            <div className="icon-mobile"></div>
-                            <h3>Responsive Design</h3>
-                            <p>
-                                Casi la mitad de todo el tráfico de Internet es ahora de una audiencia móvil. Es importante que su sitio web sea compatible con todos los tamaños de pantalla en esta era moderna. Me aseguro de que su sitio web sea responsive, lo que significa que es compatible
-                                con cualquier tamaño de la pantalla en cualquier dispositivo.
-                            </p>
-                        </div>
-                        <div className="col-xs-12 col-sm-6 col-md-4 margin-col">
-                            <div className="icon-search"></div>
-                            <h3>SEO</h3>
-                            <p>
-                                Cuando estoy creando sitios web, siempre pienso en la optimización de motores de búsqueda (SEO) en mi mente. Llevo a cabo las prácticas estándar de SEO on-page en cada página de cada sitio web que creo, lo que permite su sitio rango más alto en los motores
-                                de búsqueda - potencialmente conducir más tráfico a su sitio.
-                            </p>
-                        </div>
-                        <div className="col-xs-12 col-sm-6 col-md-4 margin-col">
-                            <div className="icon-briefcase"></div>
-                            <h3>eCommerce</h3>
-                            <p>
-                                Con años de experiencia en el comercio electrónico, puedo desarrollar una solución de comercio electrónico adaptado a las necesidades de usted, su negocio y los clientes. Y desarrollar soluciones eficaces, eficientes y de comercio electrónico bien diseñados
-                                para que coincida con sus requisitos exactos.
-                            </p>
-                        </div>
-                        <div className="col-xs-12 col-sm-6 col-md-4 margin-col">
-                            <div className="icon-insert-template"></div>
-                            <h3>Gestión de contenido</h3>
-                            <p>
-                                Es importante que usted sea capaz de manejar su sitio web, desde cualquier lugar en cualquier momento. yo desarrollo sistemas de gestión de contenidos que le permiten ver sus datos de sitios web y editar el contenido importante en su sitio web, que le
-                                permite mantener actualizado el contenido.
-                            </p>
-                        </div>
+                      {this.state.section.map(section => {
+                        return < SectionJson icon={section.icon} title={section.title} content={section.content} key={section.icon}/>
+                      })}
                     </div>
                 </div>
                 <h2 id="portafolio"> Portafolio </h2>
