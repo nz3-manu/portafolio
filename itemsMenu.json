@@ -1,6 +1,13 @@
-[
-  {"item": "Acerca de mi"},
-	{"item": "Servicio"},
-	{"item": "Portafolio"},
-	{"item": "contactar me"}
-]
+[{
+	"item": "Acerca de mi",
+	"href": "#home"
+}, {
+	"item": "Servicio",
+	"href": "#services"
+}, {
+	"item": "Portafolio",
+	"href": "#portafolio"
+}, {
+	"item": "contactar me",
+	"href": "#contact"
+}]

@@ -2,10 +2,10 @@ var ReactDom = require("react-dom");
 var React = require("react");
 
 /* generator li */
-var itemMenu = React.createClass({
+var ItemMenu = React.createClass({
   render: function () {
     return (
-      <li><a href="#home">{this.props.item}</a></li>
+      <li><a href={this.props.href}> {this.props.li} </a></li>
     )
   }
 })
@@ -26,26 +26,20 @@ var Header = React.createClass({
 
   getInitialState: function() {
     return {
-       users: []
+       menu: []
     };
   },
   componentDidMount: function () {
-  fetch('itemsMenu.json').then(menu => menu.json(), e => {
-        console.log("Obtención fallida", e);}).then(menu => {
+  fetch('itemsMenu.json').then(menuJson => menuJson.json(), e => {
+        console.log("Obtención fallida", e);}).then(menuJson => {
           this.setState({
-            users: menu
+              menu: menuJson
           })
         })
   },
   render: function () {
     return(
       <header>
-        <h1>Testing react key and map</h1>
-        {this.state.users.map(manuel => {
-          return <User name = {manuel.item} key={manuel.item}/>
-        })}
-        <h1>Final testing Testing react key and map</h1>
-
         <div className="header">
             <div className="wrap__header">
                 <div className="logo">
@@ -57,10 +51,9 @@ var Header = React.createClass({
                 <nav className="nav">
                     <div className="nav_container">
                         <ul className="nav_list">
-                            <li><a href="#home">Acerca de mí</a></li>
-                            <li><a href="#services">Servicios</a></li>
-                            <li><a href="#portafolio">Portafolio</a></li>
-                            <li><a href="#contact">Contactarme</a></li>
+                          {this.state.menu.map(liMenu => {
+                            return < ItemMenu li = {liMenu.item} href={liMenu.href} key={liMenu.item}/>
+                          })}
                         </ul>
                         <p className="nav_copyright"> Manuel Ramirez </p>
                     </div>

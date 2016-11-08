@@ -10340,6 +10340,25 @@
 	var ReactDom = __webpack_require__(4);
 	var React = __webpack_require__(169);
 
+	/* generator li */
+	var ItemMenu = React.createClass({
+	    displayName: "ItemMenu",
+
+	    render: function render() {
+	        return React.createElement(
+	            "li",
+	            null,
+	            React.createElement(
+	                "a",
+	                { href: this.props.href },
+	                " ",
+	                this.props.li,
+	                " "
+	            )
+	        );
+	    }
+	});
+
 	var User = React.createClass({
 	    displayName: "User",
 
@@ -10351,7 +10370,7 @@
 	            React.createElement(
 	                "div",
 	                null,
-	                " name: ",
+	                " ",
 	                this.props.name
 	            )
 	        );
@@ -10365,19 +10384,19 @@
 
 	    getInitialState: function getInitialState() {
 	        return {
-	            users: []
+	            menu: []
 	        };
 	    },
 	    componentDidMount: function componentDidMount() {
 	        var _this = this;
 
-	        fetch('itemsMenu.json').then(function (menu) {
-	            return menu.json();
+	        fetch('itemsMenu.json').then(function (menuJson) {
+	            return menuJson.json();
 	        }, function (e) {
 	            console.log("Obtención fallida", e);
-	        }).then(function (menu) {
+	        }).then(function (menuJson) {
 	            _this.setState({
-	                users: menu
+	                menu: menuJson
 	            });
 	        });
 	    },
@@ -10385,19 +10404,6 @@
 	        return React.createElement(
 	            "header",
 	            null,
-	            React.createElement(
-	                "h1",
-	                null,
-	                "Testing react key and map"
-	            ),
-	            this.state.users.map(function (manuel) {
-	                return React.createElement(User, { name: manuel.item, key: manuel.item });
-	            }),
-	            React.createElement(
-	                "h1",
-	                null,
-	                "Final testing Testing react key and map"
-	            ),
 	            React.createElement(
 	                "div",
 	                { className: "header" },
@@ -10431,42 +10437,9 @@
 	                            React.createElement(
 	                                "ul",
 	                                { className: "nav_list" },
-	                                React.createElement(
-	                                    "li",
-	                                    null,
-	                                    React.createElement(
-	                                        "a",
-	                                        { href: "#home" },
-	                                        "Acerca de m\xED"
-	                                    )
-	                                ),
-	                                React.createElement(
-	                                    "li",
-	                                    null,
-	                                    React.createElement(
-	                                        "a",
-	                                        { href: "#services" },
-	                                        "Servicios"
-	                                    )
-	                                ),
-	                                React.createElement(
-	                                    "li",
-	                                    null,
-	                                    React.createElement(
-	                                        "a",
-	                                        { href: "#portafolio" },
-	                                        "Portafolio"
-	                                    )
-	                                ),
-	                                React.createElement(
-	                                    "li",
-	                                    null,
-	                                    React.createElement(
-	                                        "a",
-	                                        { href: "#contact" },
-	                                        "Contactarme"
-	                                    )
-	                                )
+	                                this.state.menu.map(function (liMenu) {
+	                                    return React.createElement(ItemMenu, { li: liMenu.item, href: liMenu.href, key: liMenu.item });
+	                                })
 	                            ),
 	                            React.createElement(
 	                                "p",
