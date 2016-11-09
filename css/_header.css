@@ -190,6 +190,7 @@ li {
             font-size: 1.8rem;
             text-align: center;
             border-bottom: none;
+            cursor: pointer;
             &:hover {
                 background-color: green;
                 a {
