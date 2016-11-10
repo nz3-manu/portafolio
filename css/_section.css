@@ -172,6 +172,12 @@
 .wrap__services {
   margin: 10px 0px;
 }
+.inner-container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 .icon-briefcase, .icon-embed2, .icon-html-five2, .icon-insert-template, .icon-mobile, .icon-pencil2, .icon-search {
     color: $colorIcon;
     font-size: 10rem;

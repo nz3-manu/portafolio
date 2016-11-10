@@ -1,0 +1,12 @@
+[
+	{"title": "HTML5", "colorSidebar": "rgb(230, 126, 34)"},
+	{"title": "CSS3", "colorSidebar": "rgb(230, 126, 34)"},
+	{"title": "jQuery", "colorSidebar": "rgb(230, 126, 34)"},
+	{"title": "ECMAScript", "colorSidebar": "rgb(46, 204, 113)"},
+	{"title": "Gulp", "colorSidebar": "rgb(46, 204, 113)"},
+	{"title": "Wordpress", "colorSidebar": "rgb(46, 204, 113)"},
+	{"title": "GIT", "colorSidebar": "rgb(230, 126, 34)"},
+	{ "title": "Jekyll", "colorSidebar": "rgb(230, 126, 34)"},
+	{"title": "eCommerce", "colorSidebar": "rgb(230, 126, 34)"},
+	{ "title": "Sass", "colorSidebar": "rgba(0,0,0,.1)"}
+]

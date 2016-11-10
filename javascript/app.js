@@ -1,6 +1,5 @@
 var $ = require("jquery");
 var RenderHtml = require("./rendererHtml.js");
-
 var ancho = $(window).width();
 if (ancho > 600) {
 require("particles.js/demo/js/lib/stats.js");
@@ -38,13 +37,3 @@ var navMenu = document.querySelector('.nav_list');
 navMenu.onclick = () => {
     document.body.removeAttribute('data-state');
 }
-/****************************************************
-======================== skillbar ===================
-****************************************************/
-$(document).ready(function() {
-    $('.skillbar').each(function() {
-        $(this).find('.skillbar-bar').animate({
-            width: $(this).attr('data-percent')
-        }, 6000);
-    });
-});
