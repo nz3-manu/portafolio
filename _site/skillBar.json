@@ -1,12 +1,12 @@
 [
-	{"title": "HTML5", "colorSidebar": "rgb(230, 126, 34)"},
-	{"title": "CSS3", "colorSidebar": "rgb(230, 126, 34)"},
-	{"title": "jQuery", "colorSidebar": "rgb(230, 126, 34)"},
-	{"title": "ECMAScript", "colorSidebar": "rgb(46, 204, 113)"},
-	{"title": "Gulp", "colorSidebar": "rgb(46, 204, 113)"},
-	{"title": "Wordpress", "colorSidebar": "rgb(46, 204, 113)"},
-	{"title": "GIT", "colorSidebar": "rgb(230, 126, 34)"},
-	{ "title": "Jekyll", "colorSidebar": "rgb(230, 126, 34)"},
-	{"title": "eCommerce", "colorSidebar": "rgb(230, 126, 34)"},
-	{ "title": "Sass", "colorSidebar": "rgba(0,0,0,.1)"}
+	{"title": "HTML5", "colorSidebar": "#63aa41"},
+	{"title": "CSS3", "colorSidebar": "#89bdff"},
+	{"title": "jQuery", "colorSidebar": "#E28964"},
+	{"title": "ECMAScript", "colorSidebar": "#89bdff"},
+	{"title": "Gulp", "colorSidebar": "#E28964"},
+	{"title": "Wordpress", "colorSidebar": "#63aa41"},
+	{"title": "GIT", "colorSidebar": "#63aa41"},
+	{ "title": "Jekyll", "colorSidebar": "#89bdff"},
+	{"title": "eCommerce", "colorSidebar": "#E28964"},
+	{ "title": "Sass", "colorSidebar": "#63aa41"}
 ]

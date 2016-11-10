@@ -10331,423 +10331,421 @@
 	var $ = __webpack_require__(2);
 	/* li json */
 	var ItemMenu = React.createClass({
-	  displayName: "ItemMenu",
+	    displayName: "ItemMenu",
 
-	  render: function render() {
-	    return React.createElement(
-	      "li",
-	      null,
-	      React.createElement(
-	        "a",
-	        { href: this.props.href },
-	        " ",
-	        this.props.li,
-	        " "
-	      )
-	    );
-	  }
+	    render: function render() {
+	        return React.createElement(
+	            "li",
+	            null,
+	            React.createElement(
+	                "a",
+	                { href: this.props.href },
+	                " ",
+	                this.props.li,
+	                " "
+	            )
+	        );
+	    }
 	});
 	/* Skillbar json*/
 	var Skillbar = React.createClass({
-	  displayName: "Skillbar",
+	    displayName: "Skillbar",
 
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { className: "col-xs-12 col-sm-6 col-md-4" },
-	      React.createElement(
-	        "div",
-	        { className: "skillbar clearfix ", "data-percent": "100%" },
-	        React.createElement(
-	          "div",
-	          { className: "skillbar-title", style: { background: this.props.sidebarc } },
-	          React.createElement(
-	            "span",
-	            null,
-	            this.props.tool
-	          )
-	        ),
-	        React.createElement("div", { className: "skillbar-bar", style: { background: this.props.sidebarc } }),
-	        React.createElement(
-	          "div",
-	          { className: "skill-bar-percent" },
-	          "100%"
-	        )
-	      )
-	    );
-	  }
+	    render: function render() {
+	        return React.createElement(
+	            "div",
+	            { className: "col-xs-12 col-sm-6 col-md-4" },
+	            React.createElement(
+	                "div",
+	                { className: "skillbar clearfix ", "data-percent": "100%" },
+	                React.createElement(
+	                    "div",
+	                    { className: "skillbar-title", style: { background: this.props.sidebarc } },
+	                    React.createElement(
+	                        "span",
+	                        null,
+	                        this.props.tool
+	                    )
+	                ),
+	                React.createElement("div", { className: "skillbar-bar", style: { background: this.props.sidebarc } }),
+	                React.createElement(
+	                    "div",
+	                    { className: "skill-bar-percent" },
+	                    "100%"
+	                )
+	            )
+	        );
+	    }
 	});
 
 	/* section json*/
 	var SectionJson = React.createClass({
-	  displayName: "SectionJson",
+	    displayName: "SectionJson",
 
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
-	      React.createElement(
-	        "div",
-	        { className: this.props.icon },
-	        " "
-	      ),
-	      React.createElement(
-	        "h3",
-	        null,
-	        " ",
-	        this.props.title,
-	        " "
-	      ),
-	      React.createElement(
-	        "p",
-	        null,
-	        " ",
-	        this.props.content,
-	        " "
-	      )
-	    );
-	  }
+	    render: function render() {
+	        return React.createElement(
+	            "div",
+	            { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
+	            React.createElement(
+	                "div",
+	                { className: this.props.icon },
+	                " "
+	            ),
+	            React.createElement(
+	                "h3",
+	                null,
+	                " ",
+	                this.props.title,
+	                " "
+	            ),
+	            React.createElement(
+	                "p",
+	                null,
+	                " ",
+	                this.props.content,
+	                " "
+	            )
+	        );
+	    }
 	});
 
 	/* header */
 	var Header = React.createClass({
-	  displayName: "Header",
+	    displayName: "Header",
 
-	  getInitialState: function getInitialState() {
-	    return {
-	      menu: []
-	    };
-	  },
-	  componentDidMount: function componentDidMount() {
-	    var _this = this;
+	    getInitialState: function getInitialState() {
+	        return {
+	            menu: []
+	        };
+	    },
+	    componentDidMount: function componentDidMount() {
+	        var _this = this;
 
-	    fetch('itemsMenu.json').then(function (menuJson) {
-	      return menuJson.json();
-	    }, function (e) {
-	      console.log("Obtención fallida", e);
-	    }).then(function (menuJson) {
-	      _this.setState({
-	        menu: menuJson
-	      });
-	    });
-	  },
-	  render: function render() {
-	    return React.createElement(
-	      "header",
-	      null,
-	      React.createElement(
-	        "div",
-	        { className: "header" },
-	        React.createElement(
-	          "div",
-	          { className: "wrap__header" },
-	          React.createElement(
-	            "div",
-	            { className: "logo" },
+	        fetch('itemsMenu.json').then(function (menuJson) {
+	            return menuJson.json();
+	        }, function (e) {
+	            console.log("Obtención fallida", e);
+	        }).then(function (menuJson) {
+	            _this.setState({
+	                menu: menuJson
+	            });
+	        });
+	    },
+	    render: function render() {
+	        return React.createElement(
+	            "header",
+	            null,
 	            React.createElement(
-	              "p",
-	              null,
-	              " Manuel Ramirez"
+	                "div",
+	                { className: "header" },
+	                React.createElement(
+	                    "div",
+	                    { className: "wrap__header" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "logo" },
+	                        React.createElement(
+	                            "p",
+	                            null,
+	                            " Manuel Ramirez"
+	                        )
+	                    ),
+	                    React.createElement(
+	                        "div",
+	                        { className: "hamburguer_container", "data-toggle-menu": true },
+	                        React.createElement(
+	                            "div",
+	                            { className: "hamburger" },
+	                            " "
+	                        )
+	                    ),
+	                    React.createElement(
+	                        "nav",
+	                        { className: "nav" },
+	                        React.createElement(
+	                            "div",
+	                            { className: "nav_container" },
+	                            React.createElement(
+	                                "ul",
+	                                { className: "nav_list" },
+	                                this.state.menu.map(function (liMenu) {
+	                                    return React.createElement(ItemMenu, { li: liMenu.item, href: liMenu.href, key: liMenu.item });
+	                                })
+	                            ),
+	                            React.createElement(
+	                                "p",
+	                                { className: "nav_copyright" },
+	                                " Manuel Ramirez "
+	                            )
+	                        )
+	                    )
+	                )
 	            )
-	          ),
-	          React.createElement(
-	            "div",
-	            { className: "hamburguer_container", "data-toggle-menu": true },
-	            React.createElement(
-	              "div",
-	              { className: "hamburger" },
-	              " "
-	            )
-	          ),
-	          React.createElement(
-	            "nav",
-	            { className: "nav" },
-	            React.createElement(
-	              "div",
-	              { className: "nav_container" },
-	              React.createElement(
-	                "ul",
-	                { className: "nav_list" },
-	                this.state.menu.map(function (liMenu) {
-	                  return React.createElement(ItemMenu, { li: liMenu.item, href: liMenu.href, key: liMenu.item });
-	                })
-	              ),
-	              React.createElement(
-	                "p",
-	                { className: "nav_copyright" },
-	                " Manuel Ramirez "
-	              )
-	            )
-	          )
-	        )
-	      )
-	    );
-	  }
+	        );
+	    }
 	});
 
 	/* Hero Section  Footer*/
 	var Section = React.createClass({
-	  displayName: "Section",
+	    displayName: "Section",
 
-	  getInitialState: function getInitialState() {
-	    return {
-	      skilltools: [],
-	      section: []
-	    };
-	  },
-	  componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
-	    $(document).ready(function () {
-	      console.log("dentro de didmount");
-	      $('.skillbar').each(function () {
-	        $(this).find('.skillbar-bar').animate({
-	          width: $(this).attr('data-percent')
-	        }, 6000);
-	      });
-	    });
-	  },
-	  componentDidMount: function componentDidMount() {
-	    var _this2 = this;
+	    getInitialState: function getInitialState() {
+	        return {
+	            skilltools: [],
+	            section: []
+	        };
+	    },
+	    componentDidUpdate: function componentDidUpdate(prevProps, prevState) {
+	        $(document).ready(function () {
+	            $('.skillbar').each(function () {
+	                $(this).find('.skillbar-bar').animate({
+	                    width: $(this).attr('data-percent')
+	                }, 6000);
+	            });
+	        });
+	    },
+	    componentDidMount: function componentDidMount() {
+	        var _this2 = this;
 
-	    fetch('section.json').then(function (sectionJson) {
-	      return sectionJson.json();
-	    }, function (e) {
-	      console.log("Obtención fallida", e);
-	    }).then(function (sectionJson) {
-	      _this2.setState({
-	        section: sectionJson
-	      });
-	    });
-	    fetch('skillBar.json').then(function (skillbarJson) {
-	      return skillbarJson.json();
-	    }, function (e) {
-	      console.log("Obtención fallida", e);
-	    }).then(function (skillbarJson) {
-	      _this2.setState({
-	        skilltools: skillbarJson
-	      });
-	    });
-	  },
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { className: "wrap_content overlay" },
-	      React.createElement(
-	        "div",
-	        { className: "content_section" },
-	        React.createElement(
-	          "div",
-	          { className: "hero" },
-	          React.createElement(
+	        fetch('section.json').then(function (sectionJson) {
+	            return sectionJson.json();
+	        }, function (e) {
+	            console.log("Obtención fallida", e);
+	        }).then(function (sectionJson) {
+	            _this2.setState({
+	                section: sectionJson
+	            });
+	        });
+	        fetch('skillBar.json').then(function (skillbarJson) {
+	            return skillbarJson.json();
+	        }, function (e) {
+	            console.log("Obtención fallida", e);
+	        }).then(function (skillbarJson) {
+	            _this2.setState({
+	                skilltools: skillbarJson
+	            });
+	        });
+	    },
+	    render: function render() {
+	        return React.createElement(
 	            "div",
-	            { id: "particles-js" },
+	            { className: "wrap_content overlay" },
 	            React.createElement(
-	              "div",
-	              { className: "photo" },
-	              React.createElement("img", { src: "img/freelancer-web-developer-picture.jpg", alt: "Profile picture freelancer web developer" })
-	            )
-	          )
-	        ),
-	        React.createElement(
-	          "section",
-	          null,
-	          React.createElement(
-	            "div",
-	            { id: "wrap_section" },
-	            React.createElement(
-	              "div",
-	              { className: "section_text" },
-	              React.createElement(
-	                "h1",
-	                { id: "home" },
-	                " Front-end developer "
-	              ),
-	              React.createElement(
-	                "p",
-	                null,
-	                "Soy Desarrollador Front-end apasionado por la programaci\xF3n y desarrollo de p\xE1ginas web, utilizando buenas pr\xE1cticas al manejar: HTML5, CSS3, POSTCSS, SASS (Object Oriented CSS), JavaScript, jQuery, utilizando control de versiones como Git, dise\xF1o responsive utilizando la metodolog\xEDa mobile first y Gulp. Me considero alguien inquieto en la b\xFAsqueda de nuevas tendencias en desarrollo de p\xE1ginas web que permitan maximizar el rendimiento en el lado del cliente y mejorar as\xED la experiencia de los usuarios. Siempre estoy en b\xFAsqueda de nuevos retos y abierto a nuevos proyectos."
-	              ),
-	              React.createElement(
 	                "div",
-	                { className: "inner-container" },
+	                { className: "content_section" },
 	                React.createElement(
-	                  "div",
-	                  { className: "row wrap__skillbar" },
-	                  this.state.skilltools.map(function (skillbar) {
-	                    console.log("Hola mundo dentro de skillbar loop");
-	                    return React.createElement(Skillbar, { tool: skillbar.title, sidebarc: skillbar.colorSidebar, key: skillbar.title });
-	                  })
-	                )
-	              ),
-	              React.createElement(
-	                "h2",
-	                { id: "services" },
-	                "Servicios"
-	              ),
-	              React.createElement(
-	                "div",
-	                { className: "wrap__services" },
-	                React.createElement(
-	                  "div",
-	                  { className: "inner-container" },
-	                  React.createElement(
 	                    "div",
-	                    { className: "row services__items" },
-	                    this.state.section.map(function (section) {
-	                      return React.createElement(SectionJson, { icon: section.icon, title: section.title, content: section.content, key: section.icon });
-	                    })
-	                  )
-	                )
-	              ),
-	              React.createElement(
-	                "h2",
-	                { id: "portafolio" },
-	                " Portafolio "
-	              ),
-	              React.createElement(
-	                "div",
-	                { className: "wrap_portafolio" },
-	                React.createElement(
-	                  "div",
-	                  { className: "inner-container" },
-	                  React.createElement(
-	                    "div",
-	                    { className: "row" },
+	                    { className: "hero" },
 	                    React.createElement(
-	                      "div",
-	                      { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
-	                      React.createElement(
-	                        "a",
-	                        { href: "http://www.hipscc.org/", target: "_blank" },
-	                        React.createElement("img", { className: "img-hover img-responsive widthFull", src: "img/web-hipscc.png", alt: "website hipscc" })
-	                      )
-	                    ),
-	                    React.createElement(
-	                      "div",
-	                      { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
-	                      React.createElement(
-	                        "a",
-	                        { href: "http://solo1noche.com/", target: "_blank" },
-	                        React.createElement("img", { className: "img-hover img-responsive widthFull", src: "img/web-Solo1noche.png", alt: "website hipscc" })
-	                      )
-	                    ),
-	                    React.createElement(
-	                      "div",
-	                      { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
-	                      React.createElement(
-	                        "a",
-	                        { href: "http://www.hipscc.org/", target: "_blank" },
-	                        React.createElement("img", { className: "img-hover img-responsive widthFull", src: "img/web-freelancer-developer.png", alt: "website hipscc" })
-	                      )
-	                    ),
-	                    React.createElement(
-	                      "div",
-	                      { className: "col-xs-12 col-sm-6 col-md-offset-4 margin-col" },
-	                      React.createElement(
-	                        "a",
-	                        { href: "https://trend4less.net/", target: "_blank" },
-	                        React.createElement("img", { className: "img-hover img-responsive widthFull last-img", src: "img/web-trend4less.png", alt: "website trend4less" })
-	                      )
+	                        "div",
+	                        { id: "particles-js" },
+	                        React.createElement(
+	                            "div",
+	                            { className: "photo" },
+	                            React.createElement("img", { src: "img/freelancer-web-developer-picture.jpg", alt: "Profile picture freelancer web developer" })
+	                        )
 	                    )
-	                  )
-	                )
-	              ),
-	              React.createElement(
-	                "h2",
-	                { id: "contact" },
-	                " Contactarme "
-	              ),
-	              React.createElement(
-	                "form",
-	                { id: "form", method: "POST", className: "contact__form" },
-	                React.createElement(
-	                  "p",
-	                  { className: "name" },
-	                  React.createElement("input", { name: "name", type: "text", className: "validate[required,custom[onlyLetter],length[0,100]] feedback-input", placeholder: "Nombre", id: "name" })
 	                ),
 	                React.createElement(
-	                  "p",
-	                  { className: "email" },
-	                  React.createElement("input", { name: "email", type: "email", className: "validate[required,custom[email]] feedback-input", required: "required", placeholder: "Email", id: "email" })
-	                ),
-	                React.createElement(
-	                  "p",
-	                  { className: "text" },
-	                  React.createElement("textarea", { name: "text", className: "validate[required,length[6,300]] feedback-input", required: "required", placeholder: "Comentario", id: "comment" })
-	                ),
-	                React.createElement(
-	                  "div",
-	                  { className: "submit" },
-	                  React.createElement("input", { type: "submit", value: "Enviar", className: "btn-hover", id: "button-blue" }),
-	                  React.createElement("div", { className: "ease" })
+	                    "section",
+	                    null,
+	                    React.createElement(
+	                        "div",
+	                        { id: "wrap_section" },
+	                        React.createElement(
+	                            "div",
+	                            { className: "section_text" },
+	                            React.createElement(
+	                                "h1",
+	                                { id: "home" },
+	                                " Front-end developer "
+	                            ),
+	                            React.createElement(
+	                                "p",
+	                                null,
+	                                "Soy Desarrollador Front-end apasionado por la programaci\xF3n y desarrollo de p\xE1ginas web, utilizando buenas pr\xE1cticas al manejar: HTML5, CSS3, POSTCSS, SASS (Object Oriented CSS), JavaScript, jQuery, utilizando control de versiones como Git, dise\xF1o responsive utilizando la metodolog\xEDa mobile first y Gulp. Me considero alguien inquieto en la b\xFAsqueda de nuevas tendencias en desarrollo de p\xE1ginas web que permitan maximizar el rendimiento en el lado del cliente y mejorar as\xED la experiencia de los usuarios. Siempre estoy en b\xFAsqueda de nuevos retos y abierto a nuevos proyectos."
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "inner-container" },
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "row wrap__skillbar" },
+	                                    this.state.skilltools.map(function (skillbar) {
+	                                        return React.createElement(Skillbar, { tool: skillbar.title, sidebarc: skillbar.colorSidebar, key: skillbar.title });
+	                                    })
+	                                )
+	                            ),
+	                            React.createElement(
+	                                "h2",
+	                                { id: "services" },
+	                                "Servicios"
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "wrap__services" },
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "inner-container" },
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "row services__items" },
+	                                        this.state.section.map(function (section) {
+	                                            return React.createElement(SectionJson, { icon: section.icon, title: section.title, content: section.content, key: section.icon });
+	                                        })
+	                                    )
+	                                )
+	                            ),
+	                            React.createElement(
+	                                "h2",
+	                                { id: "portafolio" },
+	                                " Portafolio "
+	                            ),
+	                            React.createElement(
+	                                "div",
+	                                { className: "wrap_portafolio" },
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "inner-container" },
+	                                    React.createElement(
+	                                        "div",
+	                                        { className: "row" },
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
+	                                            React.createElement(
+	                                                "a",
+	                                                { href: "http://www.hipscc.org/", target: "_blank" },
+	                                                React.createElement("img", { className: "img-hover img-responsive widthFull", src: "img/web-hipscc.png", alt: "website hipscc" })
+	                                            )
+	                                        ),
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
+	                                            React.createElement(
+	                                                "a",
+	                                                { href: "http://solo1noche.com/", target: "_blank" },
+	                                                React.createElement("img", { className: "img-hover img-responsive widthFull", src: "img/web-Solo1noche.png", alt: "website hipscc" })
+	                                            )
+	                                        ),
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
+	                                            React.createElement(
+	                                                "a",
+	                                                { href: "http://www.hipscc.org/", target: "_blank" },
+	                                                React.createElement("img", { className: "img-hover img-responsive widthFull", src: "img/web-freelancer-developer.png", alt: "website hipscc" })
+	                                            )
+	                                        ),
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "col-xs-12 col-sm-6 col-md-offset-4 margin-col" },
+	                                            React.createElement(
+	                                                "a",
+	                                                { href: "https://trend4less.net/", target: "_blank" },
+	                                                React.createElement("img", { className: "img-hover img-responsive widthFull last-img", src: "img/web-trend4less.png", alt: "website trend4less" })
+	                                            )
+	                                        )
+	                                    )
+	                                )
+	                            ),
+	                            React.createElement(
+	                                "h2",
+	                                { id: "contact" },
+	                                " Contactarme "
+	                            ),
+	                            React.createElement(
+	                                "form",
+	                                { id: "form", method: "POST", className: "contact__form" },
+	                                React.createElement(
+	                                    "p",
+	                                    { className: "name" },
+	                                    React.createElement("input", { name: "name", type: "text", className: "validate[required,custom[onlyLetter],length[0,100]] feedback-input", placeholder: "Nombre", id: "name" })
+	                                ),
+	                                React.createElement(
+	                                    "p",
+	                                    { className: "email" },
+	                                    React.createElement("input", { name: "email", type: "email", className: "validate[required,custom[email]] feedback-input", required: "required", placeholder: "Email", id: "email" })
+	                                ),
+	                                React.createElement(
+	                                    "p",
+	                                    { className: "text" },
+	                                    React.createElement("textarea", { name: "text", className: "validate[required,length[6,300]] feedback-input", required: "required", placeholder: "Comentario", id: "comment" })
+	                                ),
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "submit" },
+	                                    React.createElement("input", { type: "submit", value: "Enviar", className: "btn-hover", id: "button-blue" }),
+	                                    React.createElement("div", { className: "ease" })
+	                                )
+	                            ),
+	                            React.createElement("div", { id: "dialogoverlay" }),
+	                            React.createElement(
+	                                "div",
+	                                { id: "dialogbox" },
+	                                React.createElement(
+	                                    "div",
+	                                    { className: "textBox__dialogo" },
+	                                    React.createElement("div", { id: "dialogboxhead" }),
+	                                    React.createElement("div", { id: "dialogboxbody" }),
+	                                    React.createElement("div", { id: "dialogboxfoot" })
+	                                )
+	                            )
+	                        )
+	                    )
 	                )
-	              ),
-	              React.createElement("div", { id: "dialogoverlay" }),
-	              React.createElement(
-	                "div",
-	                { id: "dialogbox" },
-	                React.createElement(
-	                  "div",
-	                  { className: "textBox__dialogo" },
-	                  React.createElement("div", { id: "dialogboxhead" }),
-	                  React.createElement("div", { id: "dialogboxbody" }),
-	                  React.createElement("div", { id: "dialogboxfoot" })
-	                )
-	              )
-	            )
-	          )
-	        )
-	      ),
-	      React.createElement(
-	        "footer",
-	        { className: "site__footer" },
-	        React.createElement(
-	          "div",
-	          { className: "footer__contect" },
-	          React.createElement(
-	            "div",
-	            { className: "content__text" },
-	            React.createElement(
-	              "small",
-	              null,
-	              " \xA9Copyright 2016 by Manuel Alejandro All right reserved"
-	            )
-	          ),
-	          React.createElement(
-	            "div",
-	            { className: "content__icon" },
-	            React.createElement(
-	              "a",
-	              { href: "https://www.linkedin.com/in/manuelrc", target: "_blank", className: "icon-linkedin" },
-	              " "
 	            ),
 	            React.createElement(
-	              "a",
-	              { href: "https://twitter.com/nz3_manu", target: "_blank", className: "icon-twitter" },
-	              " "
-	            ),
-	            React.createElement(
-	              "a",
-	              { href: "https://github.com/nz3-manu", target: "_blank", className: "icon-github" },
-	              " "
+	                "footer",
+	                { className: "site__footer" },
+	                React.createElement(
+	                    "div",
+	                    { className: "footer__contect" },
+	                    React.createElement(
+	                        "div",
+	                        { className: "content__text" },
+	                        React.createElement(
+	                            "small",
+	                            null,
+	                            " \xA9Copyright 2016 by Manuel Alejandro All right reserved"
+	                        )
+	                    ),
+	                    React.createElement(
+	                        "div",
+	                        { className: "content__icon" },
+	                        React.createElement(
+	                            "a",
+	                            { href: "https://www.linkedin.com/in/manuelrc", target: "_blank", className: "icon-linkedin" },
+	                            " "
+	                        ),
+	                        React.createElement(
+	                            "a",
+	                            { href: "https://twitter.com/nz3_manu", target: "_blank", className: "icon-twitter" },
+	                            " "
+	                        ),
+	                        React.createElement(
+	                            "a",
+	                            { href: "https://github.com/nz3-manu", target: "_blank", className: "icon-github" },
+	                            " "
+	                        )
+	                    )
+	                )
 	            )
-	          )
-	        )
-	      )
-	    );
-	  }
+	        );
+	    }
 	});
 	/* Principal div */
 	var App = React.createClass({
-	  displayName: "App",
+	    displayName: "App",
 
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      null,
-	      React.createElement(Header, null),
-	      React.createElement(Section, null)
-	    );
-	  }
+	    render: function render() {
+	        return React.createElement(
+	            "div",
+	            null,
+	            React.createElement(Header, null),
+	            React.createElement(Section, null)
+	        );
+	    }
 	});
 	ReactDom.render(React.createElement(App, null), document.getElementById('app'));
 
