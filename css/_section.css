@@ -111,6 +111,7 @@
     transition-property: width, background-color;
 }
 .skillbar-title {
+    font-family: $ubuntu;
     position: absolute;
     top: 0;
     left: 0;
@@ -127,6 +128,8 @@
     border-bottom-left-radius: 3px;
 }
 .skillbar-title span {
+    color: #f3f3f3;
+    font-size: 1.4rem;
     display: block;
     background: rgba(0, 0, 0, 0.1);
     padding: 0 20px;
