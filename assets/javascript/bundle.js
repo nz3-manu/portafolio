@@ -10558,7 +10558,7 @@
 	                            React.createElement(
 	                                "h1",
 	                                { id: "home" },
-	                                " Front-end developer "
+	                                "FRONT-END DEVELOPER"
 	                            ),
 	                            React.createElement(
 	                                "p",
@@ -10579,7 +10579,7 @@
 	                            React.createElement(
 	                                "h2",
 	                                { id: "services" },
-	                                "Servicios"
+	                                " SERVICIO"
 	                            ),
 	                            React.createElement(
 	                                "div",
@@ -10599,7 +10599,7 @@
 	                            React.createElement(
 	                                "h2",
 	                                { id: "portafolio" },
-	                                " Portafolio "
+	                                " PORTAFOLIO "
 	                            ),
 	                            React.createElement(
 	                                "div",
@@ -10652,7 +10652,7 @@
 	                            React.createElement(
 	                                "h2",
 	                                { id: "contact" },
-	                                " Contactarme "
+	                                " CONTACTARME "
 	                            ),
 	                            React.createElement(
 	                                "form",

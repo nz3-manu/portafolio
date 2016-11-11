@@ -122,7 +122,7 @@ var Section = React.createClass({
               <section>
                 <div id="wrap_section">
                     <div className="section_text">
-                        <h1 id="home"> Front-end developer </h1>
+                        <h1 id="home">FRONT-END DEVELOPER</h1>
                         <p>
                             Soy Desarrollador Front-end apasionado por la programación y desarrollo de páginas web, utilizando buenas prácticas al manejar: HTML5, CSS3, POSTCSS, SASS (Object Oriented CSS), JavaScript, jQuery, utilizando control de versiones
                             como Git, diseño responsive utilizando la metodología mobile first y Gulp. Me considero alguien inquieto en la búsqueda de nuevas tendencias en desarrollo de páginas web que permitan maximizar el rendimiento en el lado del cliente y mejorar
@@ -135,7 +135,7 @@ var Section = React.createClass({
                               })}
                           </div>
                         </div>
-                        <h2 id="services">Servicios</h2>
+                        <h2 id="services"> SERVICIO</h2>
                         <div className="wrap__services">
                           <div className="inner-container">
                             <div className="row services__items">
@@ -145,7 +145,7 @@ var Section = React.createClass({
                             </div>
                           </div>
                         </div>
-                        <h2 id="portafolio"> Portafolio </h2>
+                        <h2 id="portafolio"> PORTAFOLIO </h2>
                         <div className="wrap_portafolio">
                           <div className="inner-container">
                               <div className="row">
@@ -164,7 +164,7 @@ var Section = React.createClass({
                               </div>
                           </div>
                         </div>
-                        <h2 id="contact"> Contactarme </h2>
+                        <h2 id="contact"> CONTACTARME </h2>
                         <form id="form" method="POST" className="contact__form">
                             <p className="name">
                                 <input name="name" type="text" className="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Nombre" id="name" />

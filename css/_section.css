@@ -52,19 +52,19 @@
         font-family: $ubuntu;
         color: $colorH2;
         font-weight: bolder;
-        font-size: 2.3rem;
-        text-decoration: underline;
+        font-size: 2.6rem;
         text-align: center;
         margin: 10px 0;
     }
     h3 {
         font-family: $ubuntu;
-        color: #8a8801;
+        color: #8E1519;
+        background-color: rgba(0, 0, 0, 0.22);
+        border-radius: 9px;
         text-align: center;
         font-weight: bolder;
         font-size: 2.2rem;
         margin: 14.6px 0;
-        color: #8a8801;
     }
     p {
         color: $colorP;
