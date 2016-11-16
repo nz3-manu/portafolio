@@ -170,7 +170,7 @@ var Section = React.createClass({
                                 <input name="name" type="text" className="validate[required,custom[onlyLetter],length[0,100]] feedback-input" placeholder="Nombre" id="name" />
                             </p>
                             <p className="email">
-                                <input name="email" type="email" className="validate[required,custom[email]] feedback-input" required="required" placeholder="Email" id="email" />
+                                <input name="email" type="email" className="validate[required,custom[email]] feedback-input" required="required" placeholder="Email" name="_replyto" id="email" />
                             </p>
                             <p className="text">
                                 <textarea name="text" className="validate[required,length[6,300]] feedback-input" required="required" placeholder="Comentario" id="comment"></textarea>

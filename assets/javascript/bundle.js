@@ -10785,6 +10785,8 @@
 
 	"use strict";
 
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 	var ReactDom = __webpack_require__(5);
 	var React = __webpack_require__(181);
 	var $ = __webpack_require__(3);
@@ -10986,6 +10988,8 @@
 	        });
 	    },
 	    render: function render() {
+	        var _React$createElement;
+
 	        return React.createElement(
 	            "div",
 	            { className: "wrap_content overlay" },
@@ -11124,7 +11128,7 @@
 	                                React.createElement(
 	                                    "p",
 	                                    { className: "email" },
-	                                    React.createElement("input", { name: "email", type: "email", className: "validate[required,custom[email]] feedback-input", required: "required", placeholder: "Email", id: "email" })
+	                                    React.createElement("input", (_React$createElement = { name: "email", type: "email", className: "validate[required,custom[email]] feedback-input", required: "required", placeholder: "Email" }, _defineProperty(_React$createElement, "name", "_replyto"), _defineProperty(_React$createElement, "id", "email"), _React$createElement))
 	                                ),
 	                                React.createElement(
 	                                    "p",
