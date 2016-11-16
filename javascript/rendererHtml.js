@@ -28,7 +28,7 @@ var Skillbar = React.createClass({
 var SectionJson = React.createClass({
 render: function () {
   return (
-    <div className = "col-xs-12 col-sm-6 col-md-4 margin-col">
+    <div className = "col-xs-12 col-sm-6 col-md-4 colWithoutPadding">
         <div className = {this.props.icon}> </div>
         <h3> {this.props.title} </h3>
         <p> {this.props.content} </p>
