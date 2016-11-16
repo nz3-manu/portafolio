@@ -19,7 +19,7 @@ var removeClass = function() {
     $("form").submit(function(event) {
         event.preventDefault();
         $.ajax({
-            url: "https://formspree.io/manaleramirez@gmail.com",
+            url: "https://formspree.io/nz3.manu@gmail.com",
             method: "POST",
             data: {
                 name: $("#name").val(),
