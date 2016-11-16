@@ -1,7 +1,4 @@
-/*************************** personalize alert javascript *********************/
-
-/************************* Form Btn sent information ***********************/
-
+var $ = require("jquery");
 /* error informatio*/
 var errorInformation = function() {
         $("#button-blue").css("background-color", "#882121");
@@ -37,7 +34,6 @@ var removeClass = function() {
 
             var ancho = $(window).width();
             if (ancho > 600) {
-                Alert.render("Mensaje enviado con exito");
                 sentInformation();
                 removeClass();
             } else {

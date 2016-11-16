@@ -13,7 +13,7 @@ var ItemMenu = React.createClass({
 var Skillbar = React.createClass({
   render:function () {
     return (
-      <div className="col-xs-12 col-sm-6 col-md-4">
+      <div className="col-xs-12 col-sm-6 col-md-4 colWithoutPadding">
         <div className="skillbar clearfix " data-percent = {"100%"}>
             <div className="skillbar-title" style={{background: this.props.sidebarc}}><span>{this.props.tool}</span></div>
             <div className="skillbar-bar"   style={{background: this.props.sidebarc}}></div>
