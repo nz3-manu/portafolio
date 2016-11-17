@@ -8,6 +8,6 @@
 	{"title": "GIT", "colorSidebar": "#63aa41"},
 	{ "title": "Jekyll", "colorSidebar": "#89bdff"},
 	{"title": "eCommerce", "colorSidebar": "#E28964"},
-	{ "title": "Sass", "colorSidebar": "#6adcfa"},
-		{ "title": "bootstrap", "colorSidebar": "#E28964"}
+	{ "title": "Sass", "colorSidebar": "#89bdff"},
+	{ "title": "bootstrap", "colorSidebar": "#E28964"}
 ]

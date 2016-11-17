@@ -215,6 +215,7 @@ padding-left: 0px;
 }
 .widthFull {
   width: 100%;
+  border: 5px solid #4a5673;
 }
 @media (min-width: 767px) {
     .img-hover {
