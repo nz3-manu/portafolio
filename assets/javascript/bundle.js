@@ -10882,7 +10882,7 @@
 	    componentDidMount: function componentDidMount() {
 	        var _this = this;
 
-	        fetch('itemsMenu.json').then(function (menuJson) {
+	        fetch('json/itemsMenu.json').then(function (menuJson) {
 	            return menuJson.json();
 	        }, function (e) {
 	            console.log("Obtención fallida", e);
@@ -10968,7 +10968,7 @@
 	    componentDidMount: function componentDidMount() {
 	        var _this2 = this;
 
-	        fetch('section.json').then(function (sectionJson) {
+	        fetch('json/section.json').then(function (sectionJson) {
 	            return sectionJson.json();
 	        }, function (e) {
 	            console.log("Obtención fallida", e);
@@ -10977,7 +10977,7 @@
 	                section: sectionJson
 	            });
 	        });
-	        fetch('skillBar.json').then(function (skillbarJson) {
+	        fetch('json/skillBar.json').then(function (skillbarJson) {
 	            return skillbarJson.json();
 	        }, function (e) {
 	            console.log("Obtención fallida", e);

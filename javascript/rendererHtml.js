@@ -45,7 +45,7 @@ var Header = React.createClass({
     };
   },
   componentDidMount: function () {
-  fetch('itemsMenu.json').then(menuJson => menuJson.json(), e => {
+  fetch('json/itemsMenu.json').then(menuJson => menuJson.json(), e => {
         console.log("Obtención fallida", e);}).then(menuJson => {
           this.setState({
               menu: menuJson
@@ -97,13 +97,13 @@ var Section = React.createClass({
     });
  },
   componentDidMount: function() {
-    fetch('section.json').then(sectionJson => sectionJson.json(), e => {
+    fetch('json/section.json').then(sectionJson => sectionJson.json(), e => {
     console.log("Obtención fallida", e);}).then(sectionJson => {
       this.setState({
         section: sectionJson
       })
     });
-    fetch('skillBar.json').then(skillbarJson => skillbarJson.json(), e => {
+    fetch('json/skillBar.json').then(skillbarJson => skillbarJson.json(), e => {
       console.log("Obtención fallida", e);}).then(skillbarJson => {
         this.setState({
           skilltools: skillbarJson
