@@ -135,7 +135,7 @@ var Section = React.createClass({
                               })}
                           </div>
                         </div>
-                        <h2 id="services"> SERVICIO</h2>
+                        <h2 id="services"> SERVICIOS</h2>
                         <div className="wrap__services">
                           <div className="inner-container">
                             <div className="row services__items">

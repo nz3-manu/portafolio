@@ -11042,7 +11042,7 @@
 	                            React.createElement(
 	                                "h2",
 	                                { id: "services" },
-	                                " SERVICIO"
+	                                " SERVICIOS"
 	                            ),
 	                            React.createElement(
 	                                "div",
