@@ -94,6 +94,14 @@ var Section = React.createClass({
                 width: $(this).attr('data-percent')
             }, 6000);
         });
+        /*function change color name */
+        setInterval(function() {
+          let colorsChange = ['#ffffff', '#f1dddd', '#d2d2d2'];
+          let longColor = (colorsChange.length);
+          let number = Math.floor(Math.random()*(longColor))+ 0
+          $('.logo p').css('color', colorsChange[number]).fadeIn( "slow" );
+
+        }, 2000 )
     });
  },
   componentDidMount: function() {
