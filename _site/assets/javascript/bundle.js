@@ -10846,7 +10846,7 @@
 	    render: function render() {
 	        return React.createElement(
 	            "div",
-	            { className: "col-xs-12 col-sm-6 col-md-4 colWithoutPadding" },
+	            { className: "col-xs-12 col-sm-6 col-md-4 colWithoutPadding paddingBottom" },
 	            React.createElement(
 	                "div",
 	                { className: this.props.icon },

@@ -58,7 +58,7 @@
     }
     h3 {
         font-family: $ubuntu;
-        color: #8E1519;
+        color: #59993b;
         background-color: rgba(0, 0, 0, 0.22);
         border-radius: 9px;
         text-align: center;
@@ -93,6 +93,9 @@
 .colWithoutPadding {
 padding-right: 0px;
 padding-left: 0px;
+}
+.paddingBottom{
+padding-bottom: 10px;
 }
 
 .skillbar {
@@ -180,6 +183,9 @@ padding-left: 0px;
     .colWithoutPadding {
       padding-right: 15px;
       padding-left: 15px;
+    }
+    .paddingBottom{
+    padding-bottom: 20px;
     }
 }
 .wrap__services {

@@ -12,7 +12,7 @@
 }
 .photo {
     border-radius: 94px;
-    border: 7px solid rgba(255, 255, 255, 0.31);
+    border: 3px solid hsla(0, 0%, 100%, 0.74);
     width: 185px;
     height: 185px;
     position: absolute;
