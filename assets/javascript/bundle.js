@@ -34496,6 +34496,7 @@
 	/********** Call Ajax ************/
 	function formularioEvents($, Alert) {
 	    $("form").submit(function (event) {
+	        $(this).find("button[type='submit']").prop('disabled', true);
 	        event.preventDefault();
 	        $.ajax({
 	            url: "https://formspree.io/nz3.manu@gmail.com",
