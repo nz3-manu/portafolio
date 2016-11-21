@@ -10929,8 +10929,8 @@
 	              React.createElement(
 	                "ul",
 	                { className: "nav_list" },
-	                this.state.menu.map(function (liMenu) {
-	                  return React.createElement(ItemMenu, { li: liMenu.item, href: liMenu.href, key: liMenu.item });
+	                this.state.menu.map(function (liMenu, i) {
+	                  return React.createElement(ItemMenu, { li: liMenu.item, href: liMenu.href, key: i });
 	                })
 	              ),
 	              React.createElement(
@@ -11041,8 +11041,8 @@
 	                React.createElement(
 	                  "div",
 	                  { className: "row wrap__skillbar" },
-	                  this.state.skilltools.map(function (skillbar) {
-	                    return React.createElement(Skillbar, { tool: skillbar.title, sidebarc: skillbar.colorSidebar, key: skillbar.title });
+	                  this.state.skilltools.map(function (skillbar, i) {
+	                    return React.createElement(Skillbar, { tool: skillbar.title, sidebarc: skillbar.colorSidebar, key: i });
 	                  })
 	                )
 	              ),
@@ -11060,8 +11060,8 @@
 	                  React.createElement(
 	                    "div",
 	                    { className: "row services__items" },
-	                    this.state.section.map(function (section) {
-	                      return React.createElement(SectionJson, { icon: section.icon, title: section.title, content: section.content, key: section.icon });
+	                    this.state.section.map(function (section, i) {
+	                      return React.createElement(SectionJson, { icon: section.icon, title: section.title, content: section.content, key: i });
 	                    })
 	                  )
 	                )

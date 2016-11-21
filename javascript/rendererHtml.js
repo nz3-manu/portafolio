@@ -66,8 +66,8 @@ var Header = React.createClass({
                 <nav className="nav">
                     <div className="nav_container">
                         <ul className="nav_list">
-                          {this.state.menu.map(liMenu => {
-                            return < ItemMenu li = {liMenu.item} href={liMenu.href} key={liMenu.item}/>
+                          {this.state.menu.map((liMenu, i) => {
+                            return < ItemMenu li = {liMenu.item} href={liMenu.href} key={i}/>
                           })}
                         </ul>
                         <p className="nav_copyright"> Manuel Ramirez </p>
@@ -138,8 +138,8 @@ var Section = React.createClass({
                         </p>
                         <div className="inner-container">
                           <div className="row wrap__skillbar">
-                              {this.state.skilltools.map(skillbar => {
-                                return < Skillbar tool = {skillbar.title} sidebarc = {skillbar.colorSidebar} key={skillbar.title}/>
+                              {this.state.skilltools.map((skillbar, i) => {
+                                return < Skillbar tool = {skillbar.title} sidebarc = {skillbar.colorSidebar} key={i}/>
                               })}
                           </div>
                         </div>
@@ -147,8 +147,8 @@ var Section = React.createClass({
                         <div className="wrap__services">
                           <div className="inner-container">
                             <div className="row services__items">
-                              {this.state.section.map(section => {
-                                return < SectionJson icon={section.icon} title={section.title} content={section.content} key={section.icon}/>
+                              {this.state.section.map((section, i) => {
+                                return < SectionJson icon={section.icon} title={section.title} content={section.content} key={i}/>
                               })}
                             </div>
                           </div>
