@@ -11115,7 +11115,7 @@
 	                                        ),
 	                                        React.createElement(
 	                                            "div",
-	                                            { className: "col-xs-12 col-sm-6 col-md-offset-2 margin-col" },
+	                                            { className: "col-xs-12 col-sm-6 col-md-4 col-md-offset-2 margin-col" },
 	                                            React.createElement(
 	                                                "a",
 	                                                { href: "https://trend4less.net/", target: "_blank" },
