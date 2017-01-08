@@ -11115,11 +11115,20 @@
 	                                        ),
 	                                        React.createElement(
 	                                            "div",
-	                                            { className: "col-xs-12 col-sm-6 col-md-4 col-md-offset-2 margin-col" },
+	                                            { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
 	                                            React.createElement(
 	                                                "a",
 	                                                { href: "https://trend4less.net/", target: "_blank" },
 	                                                React.createElement("img", { className: "img-hover img-responsive widthFull", src: "img/web-trend4less.png", alt: "website trend4less" })
+	                                            )
+	                                        ),
+	                                        React.createElement(
+	                                            "div",
+	                                            { className: "col-xs-12 col-sm-6 col-md-4 margin-col" },
+	                                            React.createElement(
+	                                                "a",
+	                                                { href: "https://nz3-manu.github.io/toDoList/", target: "_blank" },
+	                                                React.createElement("img", { className: "img-hover img-responsive widthFull", src: "img/app-Things-to-do-with-react.png", alt: "website Things to do" })
 	                                            )
 	                                        ),
 	                                        React.createElement(
